@@ -1,3 +1,52 @@
-h2 {
-    color: rgb(43, 0, 255)
+* {
+    font-family: "Verdana";
+    margin: 0;
+    padding: 0;
 }
+
+h2 {
+    margin-bottom: 1.6rem;
+    text-align: center;
+    color: rgb(59, 58, 58);
+}
+
+#box-shadow-generator {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#controls-container,
+#preview {
+    flex: 1;
+    padding: 2rem;
+}
+
+/* Controls */
+.form-control {
+    display: flex;
+    padding-bottom: 1.1rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 1px dotted #ccc;
+}
+
+.form-control label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem; 
+    color:#666;
+}
+
+.form-control input[type="text"] {
+   max-width: 25px;
+}
+
+.range-input input[type="range"] {
+    -webkit-appearance: none;
+}
+
+
+.range-input input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+
