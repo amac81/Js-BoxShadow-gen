@@ -34,13 +34,16 @@ h2 {
     border-bottom: 1px dotted #ccc;
 }
 
-.form-control label {
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-bottom: 1rem; 
-    color:#8c9690
+
+.range-input input {
+   margin-top: 10px;
 }
 
+.range-input label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color:#88908c;
+}
 
 .range-input input[type="range"] {
     -webkit-appearance: none;
@@ -51,7 +54,6 @@ h2 {
     background-color: #e4e4e4;
     outline:none;
     border: 1px solid #999;
-    margin-top: 10px;
 }
 
 .range-input input[type="range"]::-webkit-slider-thumb {
@@ -62,11 +64,6 @@ h2 {
     border-radius: 2px 2px 2px 2px;
     background-color: rgb(221, 57, 36);
     cursor: pointer;
-}
-
-.range-input input[type="color"] {
-    margin-top: 10px;
-    display: flex;
 }
 
 .reference-input {
@@ -86,13 +83,16 @@ h2 {
     text-align: center;
  }
 
+/* new features */
+
 #color {
-    width: 30px;
+   
 }
 
-#color-value {
-    width: 70px;
+#color-value{
+   width: 80px;
 }
+
 
  /* PREVIEW */
 
@@ -108,7 +108,6 @@ h2 {
  #generated-rule {
     width: 100%;
     text-align: center;
-    
  }
 
 
