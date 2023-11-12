@@ -23,7 +23,7 @@ h2 {
 #controls-container,
 #preview {
     flex: 1;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 /* Controls */
@@ -35,22 +35,23 @@ h2 {
 }
 
 .form-control label {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: bold;
     margin-bottom: 1rem; 
-    color:#666;
+    color:#8c9690
 }
 
 
 .range-input input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
-    width: 100%;
+    width: 350px;
     height: 25px;
     border-radius: 5px 5px 5px 5px;
     background-color: #e4e4e4;
     outline:none;
     border: 1px solid #999;
+    margin-top: 10px;
 }
 
 .range-input input[type="range"]::-webkit-slider-thumb {
@@ -66,6 +67,7 @@ h2 {
 .reference-input {
     display: flex;
     align-items: center;
+    margin-top: 25px;
 }
 
 .reference-input p {
@@ -75,7 +77,7 @@ h2 {
 .form-control input[type="text"] {
     height: 20px;
     width: 30px;
-    margin-left: 1rem;
+    margin-left: 10px;
     text-align: center;
  }
 
