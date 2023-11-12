@@ -8,6 +8,10 @@ class BoxShadowGenerator {
         blurRef,
         spread,
         spreadRef,
+        color,
+        colorRef,
+        opacity,
+        opacityRef,
         previewBox,
         rule,
         webKitRule,
@@ -21,6 +25,10 @@ class BoxShadowGenerator {
         this.blurRef = blurRef
         this.spread = spread
         this.spreadRef = spreadRef
+        this.color = color
+        this.colorRef = colorRef
+        this.opacity = opacity
+        this.opacityRef = opacityRef
         this.previewBox = previewBox
         this.rule = rule
         this.webKitRule = webKitRule
@@ -31,12 +39,14 @@ class BoxShadowGenerator {
         this.verticalRef.value = this.vertical.value;
         this.blurRef.value = this.blur.value;
         this.spreadRef.value = this.spread.value;
+        this.colorRef.value = this.color.value;
+        this.opacityRef.value = this.opacity.value;
         this.applyRule();
         this.showRule();
     }
 
     applyRule(){
-        this.previewBox.style.boxShadow = `${this.horizontalRef.value}px ${this.verticalRef.value}px ${this.blurRef.value}px ${this.spreadRef.value}px #000000`;
+        this.previewBox.style.boxShadow = `${this.horizontalRef.value}px ${this.verticalRef.value}px ${this.blurRef.value}px ${this.spreadRef.value}px ${this.colorRef.value}`;
         this.currentRule = this.previewBox.style.boxShadow;
     }
 
@@ -64,6 +74,14 @@ class BoxShadowGenerator {
                 this.spreadRef.value = value;
                 break;
             }
+            case "color":{
+                this.colorRef.value = value;
+                break;
+            }
+            case "opacity":{
+                this.opacityRef.value = value;
+                break;
+            }
         }
 
         this.applyRule();
@@ -82,6 +100,12 @@ const blurRef = document.querySelector("#blur-value");
 const spread = document.querySelector("#spread");
 const spreadRef = document.querySelector("#spread-value");
 
+const color = document.querySelector("#color");
+const colorRef = document.querySelector("#color-value");
+
+const opacity = document.querySelector("#opacity");
+const opacityRef = document.querySelector("#opacity-value");
+
 const previewBox = document.querySelector("#box");
 
 const rule = document.querySelector("#rule span");
@@ -97,6 +121,10 @@ const boxShadow = new BoxShadowGenerator(
     blurRef,
     spread,
     spreadRef,
+    color,
+    colorRef,
+    opacity,
+    opacityRef,
     previewBox,
     rule,
     webKitRule,
@@ -124,4 +152,14 @@ blur.addEventListener("input", (e) => {
 spread.addEventListener("input", (e) => {
     const value = e.target.value;
     boxShadow.updateValue("spread", value);
+});
+
+color.addEventListener("input", (e) => {
+    const value = e.target.value;
+    boxShadow.updateValue("color", value);
+});
+
+opacity.addEventListener("input", (e) => {
+    const value = e.target.value;
+    boxShadow.updateValue("opacity", value);
 });

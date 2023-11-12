@@ -77,6 +77,35 @@
                 <p>px</p>
             </div>
         </div>
+        <div class="form-control">
+            <div class="range-input">
+                <label for="color">Cor da sombra:</label>
+                <input 
+                    type="color" 
+                    id="color" 
+                    name="color" 
+                    value="#000000"/>
+            </div>
+            <div class="reference-input">
+                <input type="text" id="color-value" name="color-value"/>
+            </div>
+        </div>
+        <div class="form-control">
+            <div class="range-input">
+                <label for="opacity">Opacidade:</label>
+                <input 
+                    type="range" 
+                    id="opacity" 
+                    name="opacity"
+                    min="0"
+                    max="1" 
+                    value="1"
+                    step="0.01"/>
+            </div>
+            <div class="reference-input">
+                <input type="text" id="opacity-value" name="opacity-value"/>
+            </div>
+        </div>
     </div>
     <div id="preview">
         <h2>Preview do efeito gerado</h2>
