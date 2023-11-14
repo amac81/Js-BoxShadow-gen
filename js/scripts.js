@@ -139,8 +139,44 @@ horizontal.addEventListener("input", (e) => {
     boxShadow.updateValue("horizontal", value);
 });
 
+horizontalRef.addEventListener("input", (e) => {
+    let value = 0;
+    const max = +horizontal.getAttribute("max")
+    const min = +horizontal.getAttribute("min")
+
+    if( e.target.value < min){
+        e.target.value = min;
+    }        
+    
+    if( e.target.value > max){
+        e.target.value = max;
+    }    
+    
+    value = e.target.value;
+    boxShadow.updateValue("horizontal", value);
+    horizontal.value = value;
+});
+
 vertical.addEventListener("input", (e) => {
     const value = e.target.value;
+    boxShadow.updateValue("vertical", value);
+});
+
+verticalRef.addEventListener("input", (e) => {
+    let value = 0;
+    const max = +vertical.getAttribute("max")
+    const min = +vertical.getAttribute("min")
+
+    if( e.target.value < min){
+        e.target.value = min;
+    }        
+    
+    if( e.target.value > max){
+        e.target.value = max;
+    }    
+    
+    value = e.target.value;
+    vertical.value = value;
     boxShadow.updateValue("vertical", value);
 });
 
@@ -149,8 +185,45 @@ blur.addEventListener("input", (e) => {
     boxShadow.updateValue("blur", value);
 });
 
+blurRef.addEventListener("input", (e) => {
+    let value = 0;
+    const max = +blur.getAttribute("max")
+    const min = +blur.getAttribute("min")
+
+    if( e.target.value < min){
+        e.target.value = min;
+    }        
+    
+    if( e.target.value > max){
+        e.target.value = max;
+    }    
+    
+    value = e.target.value;
+    blur.value = value;
+    boxShadow.updateValue("blur", value);
+});
+
+
 spread.addEventListener("input", (e) => {
     const value = e.target.value;
+    boxShadow.updateValue("spread", value);
+});
+
+spreadRef.addEventListener("input", (e) => {
+    let value = 0;
+    const max = +spread.getAttribute("max")
+    const min = +spread.getAttribute("min")
+
+    if( e.target.value < min){
+        e.target.value = min;
+    }        
+    
+    if( e.target.value > max){
+        e.target.value = max;
+    }    
+    
+    value = e.target.value;
+    spread.value = value;
     boxShadow.updateValue("spread", value);
 });
 
@@ -159,7 +232,31 @@ color.addEventListener("input", (e) => {
     boxShadow.updateValue("color", value);
 });
 
+colorRef.addEventListener("input", (e) => {
+    const value = e.target.value;
+    color.value = value;
+    boxShadow.updateValue("color", value);
+});
+
 opacity.addEventListener("input", (e) => {
     const value = e.target.value;
+    boxShadow.updateValue("opacity", value);
+});
+
+opacityRef.addEventListener("input", (e) => {
+    let value = 0;
+    const max = +opacity.getAttribute("max")
+    const min = +opacity.getAttribute("min")
+
+    if( e.target.value < min){
+        e.target.value = min;
+    }        
+    
+    if( e.target.value > max){
+        e.target.value = max;
+    }    
+    
+    value = e.target.value;
+    opacity.value = value;
     boxShadow.updateValue("opacity", value);
 });

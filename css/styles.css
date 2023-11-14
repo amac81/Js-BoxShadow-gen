@@ -58,7 +58,8 @@ input {text-align: center;}
     color:#525855;
 }
 
-.range-input input[type="range"] {
+
+.range-input input[type="range"]{
     -webkit-appearance: none;
     appearance: none;
     width: 350px;
@@ -105,13 +106,6 @@ input {text-align: center;}
 
 /* new features */
 
-#color {
-   
-}
-
-#color-value{
-  
-}
 
 
  /* PREVIEW */
