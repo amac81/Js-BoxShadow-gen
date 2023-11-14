@@ -18,7 +18,7 @@ input {text-align: center;}
 
 #box-shadow-generator {
     display: flex;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -29,13 +29,7 @@ input {text-align: center;}
 }
 
 /* Controls */
-.form-control {
-    display: flex;
-    padding-bottom: 1.1rem;
-    margin-bottom: 1.1rem;
-    border-bottom: 1px dotted #ccc;
-}
-
+.form-control,
 .form-control-color {
     display: flex;
     padding-bottom: 1.1rem;
@@ -44,19 +38,21 @@ input {text-align: center;}
 }
 
 .range-input-color {
-    flex-direction: column;
     min-width: 80%;
  }
 
  .range-input-color input {
-    width: 30px;
+    display: flex;
+    width: 50px;
  }
 
-.range-input input {
+.range-input input,
+.range-input-color input {
    margin-top: 10px;
 }
 
-.range-input label {
+.range-input label,
+.range-input-color label {
     font-size: 0.8rem;
     font-weight: bold;
     color:#525855;
@@ -94,7 +90,11 @@ input {text-align: center;}
 }
 
 .reference-input-color input{
+    display: flex;
+    align-items: center;
     height: 25px;
+    width: 90px;
+    margin-top: 25px;
 }
 
 .form-control input[type="text"] {
@@ -110,7 +110,7 @@ input {text-align: center;}
 }
 
 #color-value{
-   width: 80px;
+  
 }
 
 
@@ -139,7 +139,7 @@ input {text-align: center;}
  #rules-area {
     background-color: rgb(230, 255, 221);
     padding:1.1rem;
-    max-width: 90%;
+    max-width: 50%;
     margin: 0 auto;
     border: 2px solid #58b118;    
  }
