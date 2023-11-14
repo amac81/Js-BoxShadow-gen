@@ -14,6 +14,8 @@ h2 {
     color: rgb(59, 58, 58);
 }
 
+input {text-align: center;}
+
 #box-shadow-generator {
     display: flex;
     max-width: 1000px;
@@ -34,6 +36,21 @@ h2 {
     border-bottom: 1px dotted #ccc;
 }
 
+.form-control-color {
+    display: flex;
+    padding-bottom: 1.1rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 1px dotted #ccc;
+}
+
+.range-input-color {
+    flex-direction: column;
+    min-width: 80%;
+ }
+
+ .range-input-color input {
+    width: 30px;
+ }
 
 .range-input input {
    margin-top: 10px;
@@ -42,7 +59,7 @@ h2 {
 .range-input label {
     font-size: 0.8rem;
     font-weight: bold;
-    color:#88908c;
+    color:#525855;
 }
 
 .range-input input[type="range"] {
@@ -76,11 +93,14 @@ h2 {
     margin-left: 4px;    
 }
 
+.reference-input-color input{
+    height: 25px;
+}
+
 .form-control input[type="text"] {
     height: 20px;
     width: 30px;
     margin-left: 10px;
-    text-align: center;
  }
 
 /* new features */
