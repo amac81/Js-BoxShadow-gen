@@ -14,7 +14,9 @@ h2 {
     color: rgb(59, 58, 58);
 }
 
-input {text-align: center;}
+input {
+    text-align: center;
+}
 
 #box-shadow-generator {
     display: flex;
@@ -57,7 +59,6 @@ input {text-align: center;}
     font-weight: bold;
     color:#525855;
 }
-
 
 .range-input input[type="range"]{
     -webkit-appearance: none;
@@ -106,7 +107,11 @@ input {text-align: center;}
 
 /* new features */
 
-
+#copy-info{
+    font-size: 0.9rem;
+    color: #525855;
+    margin-top: 1rem;
+}
 
  /* PREVIEW */
 
@@ -124,16 +129,65 @@ input {text-align: center;}
     text-align: center;
  }
 
-
  #generated-rule p{
     margin-bottom: 0.4rem;
  }
  
-
  #rules-area {
-    background-color: rgb(230, 255, 221);
+    background-color: #e6ffdd;
     padding:1.1rem;
-    max-width: 50%;
+    max-width: 90%;
     margin: 0 auto;
     border: 2px solid #58b118;    
+ }
+
+ 
+ #rules-area:hover {
+    background-color: #e3faf1;
+    cursor: pointer;
+ }
+
+ /* Responsive */
+ @media (max-width: 425px) {
+
+    .range-input input[type="range"] {
+        width: 220px;
+    }
+
+    .range-input-color {
+        min-width: 69%;
+     }
+
+    #box-shadow-generator {
+        flex-direction: column;
+    }
+
+    #controls-container    
+    {   
+        padding: 1rem 1rem;      
+    }
+    
+    h2   
+    {   
+        font-size: 1.1rem;      
+    }
+
+    #preview
+    {    
+        padding-top: 0;
+    }
+
+    #box-shadow-generator {
+        flex-direction: column;
+    }
+
+    #box {
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    #rules-area {
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
+    }
  }

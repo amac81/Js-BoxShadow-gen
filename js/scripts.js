@@ -112,6 +112,9 @@ const rule = document.querySelector("#rule span");
 const webKitRule = document.querySelector("#webkit-rule span");
 const mozRule = document.querySelector("#moz-rule span");
 
+const rulesArea = document.querySelector("#rules-area");
+const copyInfo = document.querySelector("#copy-info");
+
 const boxShadow = new BoxShadowGenerator(
     horizontal,
     horizontalRef,
@@ -131,6 +134,25 @@ const boxShadow = new BoxShadowGenerator(
     mozRule);
 
 boxShadow.initialize();
+
+// Functions
+
+function copyRulesToClipboard() {
+    const infoText = copyInfo.innerText;
+    //regex to replace any sequence of two or more consecutive newline characters with just one
+    const allRules = rulesArea.innerText.replace(/[\r\n]{2,}/g, "\n");
+
+    rulesArea.style.background = "#fce2b1"
+    copyInfo.innerText = "Regras copiadas!"
+    
+    //copy to clipboard
+    navigator.clipboard.writeText(allRules).then(() => {
+        setTimeout(() => {
+            copyInfo.innerText = infoText;
+            rulesArea.style.background = "#e3faf1"
+          }, "500");      
+    })
+}
 
 // Events
 
@@ -260,3 +282,13 @@ opacityRef.addEventListener("input", (e) => {
     opacity.value = value;
     boxShadow.updateValue("opacity", value);
 });
+
+rulesArea.addEventListener("click", (e) => {
+    e.preventDefault();
+ 
+   
+
+    copyRulesToClipboard();
+
+});
+
