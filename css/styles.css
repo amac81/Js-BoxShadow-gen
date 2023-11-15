@@ -184,6 +184,7 @@ input {
     #box {
         height: 200px;
         margin: 0 auto;
+        width: 90%;
     }
 
     #rules-area {
